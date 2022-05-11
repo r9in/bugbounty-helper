@@ -65,21 +65,23 @@ async def on_message(msg):
                     await sent_message.edit(content=f"[{ndone}] {w}")
                     break
 
-    with open("logger.txt") as f:
-        for title in f:
+    if msg.author == client.user:
+        return
+    if msg.content.startswith("note") and msg.channel.name == 'makenotes':
+        channel = client.get_channel(974070414131228713)
 
-            if msg.author == client.user:
-                return
-            if msg.content.startswith("note") and msg.channel.name == 'notes':
+        await channel.send("WHAT IS THE TITLE OF YOUR NOTE?")
+        title = await client.wait_for("message")
 
-                channel = client.get_channel(974027423064682557)
-                await channel.send("TYPE YOUR NOTES!")
-                notes = await client.wait_for("message")
-                nchannel = client.get_channel(974027423064682557)
-                embed=discord.Embed(title=f"{title}",description=notes.content,color=0x9208ea)
-                await nchannel.send(embed=embed)
+        await channel.send("TYPE YOUR NOTE!")
+        notes = await client.wait_for("message")
+
+        nchannel = client.get_channel(974068875585019904)
+        embed=discord.Embed(title=title.content,description=notes.content,color=0x9208ea)
+        await nchannel.send(embed=embed)
 
 try:
     client.run(token)
 except KeyboardInterrupt:
     pass
+
