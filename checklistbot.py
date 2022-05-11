@@ -65,16 +65,14 @@ async def on_message(msg):
                     await sent_message.edit(content=f"[{ndone}] {w}")
                     break
 
-@client.event
-async def on_message(message):
-
     with open("logger.txt") as f:
         for title in f:
 
-            if message.author == client.user:
+            if msg.author == client.user:
                 return
-            if message.content.startswith("note") and message.channel.name == 'checklist':
-                channel = client.get_channel(973370473473777664)
+            if msg.content.startswith("note") and msg.channel.name == 'notes':
+
+                channel = client.get_channel(974027423064682557)
                 await channel.send("TYPE YOUR NOTES!")
                 notes = await client.wait_for("message")
                 nchannel = client.get_channel(974027423064682557)
