@@ -1,8 +1,10 @@
-Checklist discord bot for pentesters
+Discord bot for pentesters
 
 Commands: 
 
 > Start
+
+> Note
 
 > Done
 
