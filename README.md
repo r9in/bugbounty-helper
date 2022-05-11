@@ -1,6 +1,6 @@
 # pentesting-helper
 
-Checklist bot for pentesters
+Checklist discord bot for pentesters
 
 Checklist by: https://github.com/sehno/Bug-bounty/blob/master/bugbounty_checklist.md
 
