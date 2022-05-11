@@ -5,7 +5,9 @@ Checklist discord bot for pentesters
 Commands: 
 
 > Start
+
 > Done
+
 > Notdone
 
 Checklist by: https://github.com/sehno/Bug-bounty/blob/master/bugbounty_checklist.md
