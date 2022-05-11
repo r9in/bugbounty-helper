@@ -42,7 +42,7 @@ async def on_message(msg):
             line_number_to_show = line_number_to_show + 1
             save_file.write(f'{line_number_to_show}')
 
-        with open("test.txt") as f:
+        with open("logger.txt") as f:
             for w in f:
                 print(w)
 
@@ -68,7 +68,7 @@ async def on_message(msg):
 @client.event
 async def on_message(message):
 
-    with open("test.txt") as f:
+    with open("logger.txt") as f:
         for title in f:
 
             if message.author == client.user:
