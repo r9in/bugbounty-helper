@@ -1,5 +1,3 @@
-# pentesting-helper
-
 Checklist discord bot for pentesters
 
 Commands: 
