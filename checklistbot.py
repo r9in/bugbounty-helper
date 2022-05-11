@@ -4,7 +4,7 @@ import json
 import time
 from subprocess import Popen, PIPE
 
-token = "OTQ2MjQzMjUzNjk3Njc1Mjc1.Yhb3tA.iuM-8QwH1NTdCk669RLTM3bIgtc"
+token = "YOURTOKEN"
 done = ":green_square:"
 ndone = ":orange_square:"
 
@@ -64,7 +64,6 @@ async def on_message(msg):
                     await res.delete()
                     await sent_message.edit(content=f"[{ndone}] {w}")
                     break
-
 
 try:
     client.run(token)
