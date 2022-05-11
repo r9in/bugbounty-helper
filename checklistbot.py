@@ -36,13 +36,13 @@ async def on_message(msg):
         with open("checklist.txt") as quotes_file:
             for line_number, line in enumerate(quotes_file):
                 if line_number == line_number_to_show:
-                    print(line, file=open('test.txt', 'w'))
+                    print(line, file=open('w.txt', 'w'))
 
         with open(SAVE_FILE, 'w') as save_file:
             line_number_to_show = line_number_to_show + 1
             save_file.write(f'{line_number_to_show}')
 
-        with open("test.txt") as f:
+        with open("w.txt") as f:
             for w in f:
                 print(w)
 
