@@ -1,4 +1,4 @@
-Discord bot for pentesters
+Discord bot for bugbonty hunters
 
 Commands: 
 
